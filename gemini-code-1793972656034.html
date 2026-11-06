@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debates Contemporáneos - Repaso Final</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Debates Contemporáneos</h1>
+        <p>Plataforma interactiva de estudio y preparación para el final</p>
+        <nav>
+            <button onclick="mostrarSeccion('unidades')">Unidades Temáticas</button>
+            <button onclick="mostrarSeccion('autores')">Autores Clave</button>
+            <button onclick="mostrarSeccion('conceptos')">Diferencias y Leyes</button>
+            <button onclick="mostrarSeccion('juego')">Juego de Estudio</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN UNIDADES -->
+        <section id="unidades" class="seccion activa">
+            <h2>Unidades Temáticas</h2>
+            <div class="tarjeta">
+                <h3>Unidad 1: Sociedad, Cultura y Otredad</h3>
+                <ul>
+                    <li><strong>Construcción de la realidad:</strong> La distinción entre lo "natural" (inherente a la biología) y lo "social" o "normal" (construcciones socioculturales arbitrarias)[cite: 1].</li>
+                    <li><strong>Clasificación de la Otredad:</strong> Cómo las instituciones categorizan a ciertos sujetos como el "otro" lejano, peligroso o inferior (ej. discriminación por nacionalidad o clase)[cite: 1, 6].</li>
+                    <li><strong>Paradigmas:</strong> Transición de ideales positivistas-modernos a posturas postmodernas y críticas[cite: 1].</li>
+                </ul>
+            </div>
+            <div class="tarjeta">
+                <h3>Unidad 2: ESI, Género y Diversidad</h3>
+                <ul>
+                    <li><strong>Conceptos base:</strong> Diferenciación entre Sexo biológico (características físicas), Identidad de género (vivencia interna), Expresión de género (cómo nos mostramos) y Orientación sexual (atracción física/emocional).</li>
+                    <li><strong>Hegemonía:</strong> El androcentrismo y el poder hegemónico que patologiza lo que escapa a la heteronorma cisgénero.</li>
+                </ul>
+            </div>
+            <div class="tarjeta">
+                <h3>Unidad 3: Violencias y Salud Mental</h3>
+                <ul>
+                    <li><strong>Violencia Simbólica:</strong> Patrones estereotipados que reproducen la desigualdad de manera naturalizada[cite: 9, 10].</li>
+                    <li><strong>Vulnerabilidad Digital:</strong> El impacto del Grooming (construcción de falsa intimidad para someter a adolescentes) y el Ciberbullying en la salud mental.</li>
+                    <li><strong>Suicidio Adolescente:</strong> Analizado desde la "masculinización del riesgo", donde el mandato de dureza patriarcal impide a los varones expresar dolor emocional, aislando a las víctimas.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECCIÓN AUTORES -->
+        <section id="autores" class="seccion oculta">
+            <h2>Autores Principales</h2>
+            <div class="tarjeta">
+                <ul>
+                    <li><strong>Josep Vicent Marqués:</strong> Postula que las conductas que asumimos como naturales son construcciones sociales arbitrarias que podrían ser de otra manera[cite: 1].</li>
+                    <li><strong>Edmund Leach:</strong> Analiza las clasificaciones de la alteridad y cómo se construye la idea de "Nosotros y los demás"[cite: 1].</li>
+                    <li><strong>Luis Bonino:</strong> Define los "micromachismos" como hábiles artes de dominio de bajísima intensidad. Los clasifica en: Utilitarios (sobrecarga de cuidados), Encubiertos (manipulación), Coercitivos (control del espacio/tiempo) y de Crisis (reacciones ante el empoderamiento femenino).</li>
+                    <li><strong>Rita Segato:</strong> Acuña las "contrapedagogías de la crueldad", advirtiendo cómo el sistema capitalista y patriarcal programa a los sujetos para ser insensibles ante el sufrimiento ajeno[cite: 1].</li>
+                    <li><strong>Silvia Chejter:</strong> Delimita las modalidades de las violencias (física, psicológica, sexual, económica y simbólica)[cite: 7, 8, 9].</li>
+                    <li><strong>Thomas Kuhn:</strong> Estadios científicos y transición de paradigmas (del modelo tutelar al paradigma de derechos humanos)[cite: 1].</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONCEPTOS Y LEYES -->
+        <section id="conceptos" class="seccion oculta">
+            <h2>Leyes Fundamentales y Diferencias Clave</h2>
+            <div class="tarjeta">
+                <h3>Marco Normativo Argentino</h3>
+                <ul>
+                    <li><strong>Ley N° 26.150 (ESI):</strong> Garantiza el derecho a recibir educación sexual integral en todos los establecimientos educativos[cite: 1].</li>
+                    <li><strong>Ley N° 26.657 (Salud Mental):</strong> Prohíbe la discriminación por padecimiento mental, establece que no es un estado inmodificable y exige abordajes comunitarios[cite: 3].</li>
+                    <li><strong>Ley N° 27.130 (Prevención del Suicidio):</strong> Establece estrategias de posvención y desmitifica que hablar del suicidio "da ideas", confirmando que hablar de manera responsable previene el acto[cite: 2].</li>
+                </ul>
+                <h3>Diferencias Conceptuales</h3>
+                <p><strong>Cisgénero vs Transgénero:</strong> Cisgénero es la coincidencia entre la identidad de género y el fenotipo sexual asignado al nacer; transgénero es su opuesto.</p>
+                <p><strong>Violencia Psicológica vs Simbólica:</strong> La psicológica ataca directamente la autoestima del individuo; la simbólica utiliza mensajes sutiles e institucionales para reproducir la dominación estructural en toda la sociedad[cite: 9, 10].</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN JUEGO -->
+        <section id="juego" class="seccion oculta">
+            <h2>Simulador de Autoevaluación</h2>
+            <div class="tarjeta" id="contenedor-quiz">
+                <p id="pregunta-texto" class="pregunta"></p>
+                <div id="opciones-contenedor" class="opciones"></div>
+                <p id="resultado-feedback" class="feedback"></p>
+                <button id="btn-siguiente" onclick="siguientePregunta()" style="display: none;">Siguiente Pregunta</button>
+            </div>
+            <div id="resultado-final" class="tarjeta oculta">
+                <h3>¡Evaluación Completada!</h3>
+                <p id="puntaje-texto"></p>
+                <button onclick="reiniciarJuego()">Volver a Jugar</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

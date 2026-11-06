@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background: #f8f9fa;
+    --text-color: #333;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+nav {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.seccion {
+    display: none;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.seccion.activa {
+    display: block;
+}
+
+.tarjeta {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+}
+
+.tarjeta h3 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.8rem;
+}
+
+/* Estilos específicos para el Quiz */
+.pregunta {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.opcion-btn {
+    background-color: #f1f2f6;
+    color: var(--text-color);
+    text-align: left;
+    font-weight: normal;
+    border: 1px solid #ced6e0;
+}
+
+.opcion-btn:hover {
+    background-color: #eccc68;
+    color: #2f3542;
+}
+
+.opcion-btn.correcta {
+    background-color: #2ed573;
+    color: white;
+    border-color: #2ed573;
+}
+
+.opcion-btn.incorrecta {
+    background-color: #ff4757;
+    color: white;
+    border-color: #ff4757;
+}
+
+.feedback {
+    margin-top: 1rem;
+    font-weight: bold;
+    min-height: 1.5rem;
+}
+
+.oculta {
+    display: none !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
