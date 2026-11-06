@@ -3,98 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Debates Contemporáneos - Repaso Final</title>
+    <title>Estudio - Debates Contemporáneos</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Debates Contemporáneos</h1>
-        <p>Plataforma interactiva de estudio y preparación para el final</p>
-        <nav>
-            <button onclick="mostrarSeccion('unidades')">Unidades Temáticas</button>
-            <button onclick="mostrarSeccion('autores')">Autores Clave</button>
-            <button onclick="mostrarSeccion('conceptos')">Diferencias y Leyes</button>
-            <button onclick="mostrarSeccion('juego')">Juego de Estudio</button>
-        </nav>
-    </header>
+    <div class="app-container">
+        <!-- BARRA LATERAL (NAVEGACIÓN) -->
+        <aside class="sidebar">
+            <h2><i class="fas fa-book-open"></i> Debates Final</h2>
+            <nav>
+                <button class="nav-btn active" data-target="unidad1">Unidad 1: Sociedad y Otredad</button>
+                <button class="nav-btn" data-target="unidad2">Unidad 2: ESI y Diversidad</button>
+                <button class="nav-btn" data-target="unidad3">Unidad 3: Violencias y Salud</button>
+                <button class="nav-btn" data-target="autores">Glosario de Autores</button>
+                <button class="nav-btn game-btn" data-target="juego"><i class="fas fa-gamepad"></i> Juego de Cartas</button>
+            </nav>
+        </aside>
 
-    <main>
-        <!-- SECCIÓN UNIDADES -->
-        <section id="unidades" class="seccion activa">
-            <h2>Unidades Temáticas</h2>
-            <div class="tarjeta">
-                <h3>Unidad 1: Sociedad, Cultura y Otredad</h3>
-                <ul>
-                    <li><strong>Construcción de la realidad:</strong> La distinción entre lo "natural" (inherente a la biología) y lo "social" o "normal" (construcciones socioculturales arbitrarias)[cite: 1].</li>
-                    <li><strong>Clasificación de la Otredad:</strong> Cómo las instituciones categorizan a ciertos sujetos como el "otro" lejano, peligroso o inferior (ej. discriminación por nacionalidad o clase)[cite: 1, 6].</li>
-                    <li><strong>Paradigmas:</strong> Transición de ideales positivistas-modernos a posturas postmodernas y críticas[cite: 1].</li>
-                </ul>
-            </div>
-            <div class="tarjeta">
-                <h3>Unidad 2: ESI, Género y Diversidad</h3>
-                <ul>
-                    <li><strong>Conceptos base:</strong> Diferenciación entre Sexo biológico (características físicas), Identidad de género (vivencia interna), Expresión de género (cómo nos mostramos) y Orientación sexual (atracción física/emocional).</li>
-                    <li><strong>Hegemonía:</strong> El androcentrismo y el poder hegemónico que patologiza lo que escapa a la heteronorma cisgénero.</li>
-                </ul>
-            </div>
-            <div class="tarjeta">
-                <h3>Unidad 3: Violencias y Salud Mental</h3>
-                <ul>
-                    <li><strong>Violencia Simbólica:</strong> Patrones estereotipados que reproducen la desigualdad de manera naturalizada[cite: 9, 10].</li>
-                    <li><strong>Vulnerabilidad Digital:</strong> El impacto del Grooming (construcción de falsa intimidad para someter a adolescentes) y el Ciberbullying en la salud mental.</li>
-                    <li><strong>Suicidio Adolescente:</strong> Analizado desde la "masculinización del riesgo", donde el mandato de dureza patriarcal impide a los varones expresar dolor emocional, aislando a las víctimas.</li>
-                </ul>
-            </div>
-        </section>
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="content">
+            
+            <!-- UNIDAD 1 -->
+            <section id="unidad1" class="seccion activa">
+                <h1>Unidad 1: Sociedad, Cultura y Paradigmas</h1>
+                
+                <details class="tema-card" open>
+                    <summary>Lo Natural, lo Social y lo Normal (Vicent Marqués)</summary>
+                    <div class="tema-content">
+                        <p><strong>Josep Vicent Marqués ("No es natural"):</strong> Explica que casi todo lo que hacemos (cómo comemos, nuestros horarios, cómo nos vestimos) no está dictado por la biología (no es natural), sino que es una <strong>construcción social</strong>. Lo que consideramos "normal" es simplemente un acuerdo sociocultural de nuestra época. <em>Ejemplo de examen:</em> Comer es natural (necesidad biológica), pero qué comemos, a qué hora y con qué cubiertos es social.</p>
+                    </div>
+                </details>
 
-        <!-- SECCIÓN AUTORES -->
-        <section id="autores" class="seccion oculta">
-            <h2>Autores Principales</h2>
-            <div class="tarjeta">
-                <ul>
-                    <li><strong>Josep Vicent Marqués:</strong> Postula que las conductas que asumimos como naturales son construcciones sociales arbitrarias que podrían ser de otra manera[cite: 1].</li>
-                    <li><strong>Edmund Leach:</strong> Analiza las clasificaciones de la alteridad y cómo se construye la idea de "Nosotros y los demás"[cite: 1].</li>
-                    <li><strong>Luis Bonino:</strong> Define los "micromachismos" como hábiles artes de dominio de bajísima intensidad. Los clasifica en: Utilitarios (sobrecarga de cuidados), Encubiertos (manipulación), Coercitivos (control del espacio/tiempo) y de Crisis (reacciones ante el empoderamiento femenino).</li>
-                    <li><strong>Rita Segato:</strong> Acuña las "contrapedagogías de la crueldad", advirtiendo cómo el sistema capitalista y patriarcal programa a los sujetos para ser insensibles ante el sufrimiento ajeno[cite: 1].</li>
-                    <li><strong>Silvia Chejter:</strong> Delimita las modalidades de las violencias (física, psicológica, sexual, económica y simbólica)[cite: 7, 8, 9].</li>
-                    <li><strong>Thomas Kuhn:</strong> Estadios científicos y transición de paradigmas (del modelo tutelar al paradigma de derechos humanos)[cite: 1].</li>
-                </ul>
-            </div>
-        </section>
+                <details class="tema-card">
+                    <summary>Alteridad y Otredad (Edmund Leach)</summary>
+                    <div class="tema-content">
+                        <p><strong>Edmund Leach ("Nosotros y los demás"):</strong> Analiza cómo los seres humanos clasificamos a quienes nos rodean para sentirnos seguros. Crea un sistema de distancias:</p>
+                        <ul>
+                            <li><strong>El Otro lejano/desconocido:</strong> No lo consideramos humano del todo, nos es indiferente o lo vemos como un animal salvaje (ej. tribus aisladas).</li>
+                            <li><strong>El Otro enemigo/cercano:</strong> Lo reconocemos como humano, pero es una amenaza a nuestro grupo (ej. xenofobia en las fronteras, nacionalismos).</li>
+                            <li><strong>El Otro próximo:</strong> Es parte de nuestro entorno pero diferente, a menudo subordinado (ej. minorías, clases bajas).</li>
+                        </ul>
+                    </div>
+                </details>
 
-        <!-- SECCIÓN CONCEPTOS Y LEYES -->
-        <section id="conceptos" class="seccion oculta">
-            <h2>Leyes Fundamentales y Diferencias Clave</h2>
-            <div class="tarjeta">
-                <h3>Marco Normativo Argentino</h3>
-                <ul>
-                    <li><strong>Ley N° 26.150 (ESI):</strong> Garantiza el derecho a recibir educación sexual integral en todos los establecimientos educativos[cite: 1].</li>
-                    <li><strong>Ley N° 26.657 (Salud Mental):</strong> Prohíbe la discriminación por padecimiento mental, establece que no es un estado inmodificable y exige abordajes comunitarios[cite: 3].</li>
-                    <li><strong>Ley N° 27.130 (Prevención del Suicidio):</strong> Establece estrategias de posvención y desmitifica que hablar del suicidio "da ideas", confirmando que hablar de manera responsable previene el acto[cite: 2].</li>
-                </ul>
-                <h3>Diferencias Conceptuales</h3>
-                <p><strong>Cisgénero vs Transgénero:</strong> Cisgénero es la coincidencia entre la identidad de género y el fenotipo sexual asignado al nacer; transgénero es su opuesto.</p>
-                <p><strong>Violencia Psicológica vs Simbólica:</strong> La psicológica ataca directamente la autoestima del individuo; la simbólica utiliza mensajes sutiles e institucionales para reproducir la dominación estructural en toda la sociedad[cite: 9, 10].</p>
-            </div>
-        </section>
+                <details class="tema-card">
+                    <summary>Pedagogía de la Crueldad (Rita Segato)</summary>
+                    <div class="tema-content">
+                        <p><strong>Rita Segato:</strong> Afirma que el capitalismo y el patriarcado nos "entrenan" (pedagogía) para cosificar la vida humana y perder la empatía. Nos acostumbramos a ver el cuerpo de las mujeres y de los vulnerables como "cosas" o territorios de conquista. Propone la <strong>Contrapedagogía de la crueldad</strong>: rescatar la empatía, el vínculo, lo comunitario y el cuidado mutuo como formas de resistencia política.</p>
+                    </div>
+                </details>
 
-        <!-- SECCIÓN JUEGO -->
-        <section id="juego" class="seccion oculta">
-            <h2>Simulador de Autoevaluación</h2>
-            <div class="tarjeta" id="contenedor-quiz">
-                <p id="pregunta-texto" class="pregunta"></p>
-                <div id="opciones-contenedor" class="opciones"></div>
-                <p id="resultado-feedback" class="feedback"></p>
-                <button id="btn-siguiente" onclick="siguientePregunta()" style="display: none;">Siguiente Pregunta</button>
-            </div>
-            <div id="resultado-final" class="tarjeta oculta">
-                <h3>¡Evaluación Completada!</h3>
-                <p id="puntaje-texto"></p>
-                <button onclick="reiniciarJuego()">Volver a Jugar</button>
-            </div>
-        </section>
-    </main>
+                <details class="tema-card">
+                    <summary>Estadios Científicos y Paradigmas (Thomas Kuhn)</summary>
+                    <div class="tema-content">
+                        <p><strong>Thomas Kuhn:</strong> La ciencia no avanza de forma lineal, sino por rupturas. Un <strong>Paradigma</strong> es un modelo o visión del mundo aceptado en una época. Cuando el paradigma ya no puede explicar nuevos problemas, entra en <strong>crisis</strong> y ocurre una <strong>revolución científica</strong> que impone un nuevo paradigma (Ej: pasar del paradigma tutelar de menores al paradigma de los Derechos Humanos).</p>
+                    </div>
+                </details>
+            </section>
 
+            <!-- UNIDAD 2 -->
+            <section id="unidad2" class="seccion">
+                <h1>Unidad 2: ESI, Género y Diversidades</h1>
+                
+                <details class="tema-card" open>
+                    <summary>Diferencias Clave: Sexo, Identidad, Expresión y Orientación</summary>
+                    <div class="tema-content">
+                        <p>Basado en el esquema de la cátedra (Cerebro, Corazón, Genitales, Apariencia):</p>
+                        <ul>
+                            <li><strong>Sexo Biológico (Genitales/Cromosomas):</strong> Características físicas y mensurables con las que nacemos (Macho, Hembra, Intersexual).</li>
+                            <li><strong>Identidad de Género (Cerebro):</strong> Es la vivencia interna e individual del género tal como cada persona la siente. Puede corresponder o no con el sexo asignado al nacer.</li>
+                            <li><strong>Expresión de Género (Apariencia):</strong> Cómo nos mostramos al mundo (ropa, comportamiento, nombre).</li>
+                            <li><strong>Orientación Sexual (Corazón):</strong> Hacia quién sentimos atracción física, erótica y afectiva (Heterosexual, Homosexual, Bisexual, Pansexual, Asexual).</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="tema-card">
+                    <summary>Cisgénero vs Transgénero y Hegemonía</summary>
+                    <div class="tema-content">
+                        <p><strong>Cisgénero:</strong> Persona cuya identidad de género coincide con su fenotipo sexual asignado al nacer (Ej: nace con vulva y se identifica como mujer).</p>
+                        <p><strong>Poder Hegemónico y Androcentrismo:</strong> La sociedad occidental impone una hegemonía (dominio cultural) <em>heteronormativa y androcéntrica</em> (el hombre blanco, heterosexual y cisgénero como medida de todas las cosas). Esto genera sexismo y desigualdad hacia las mujeres y disidencias.</p>
+                        <p><strong>Significado Bandera LGBT+ (creada por Gilbert Baker en 1978):</strong> 
+                        Rojo (Vida), Naranja (Salud), Amarillo (Luz del sol), Verde (Naturaleza), Turquesa (Magia/Arte), Azul/Índigo (Serenidad), Violeta (Espíritu).</p>
+                    </div>
+                </details>
+
+                <details class="tema-card">
+                    <summary>Marco Legal (Leyes Fundamentales)</summary>
+                    <div class="tema-content">
+                        <ul>
+                            <li><strong>Ley N° 26.150 (ESI - 2006):</strong> Derecho a recibir educación sexual integral, científica y laica en todas las escuelas (públicas y privadas).</li>
+                            <li><strong>Ley N° 27.499 (Ley Micaela - 2018):</strong> Capacitación obligatoria en temática de género y violencia contra las mujeres para todas las personas que se desempeñen en los tres poderes del Estado.</li>
+                            <li><strong>Ley N° 26.743 (Identidad de Género):</strong> Toda persona tiene derecho al reconocimiento de su identidad de género, al libre desarrollo conforme a ella y a ser tratada de acuerdo a la misma.</li>
+                        </ul>
+                    </div>
+                </details>
+            </section>
+
+            <!-- UNIDAD 3 -->
+            <section id="unidad3" class="seccion">
+                <h1>Unidad 3: Violencias, Grooming y Salud Mental</h1>
+
+                <details class="tema-card" open>
+                    <summary>Los Micromachismos (Luis Bonino)</summary>
+                    <div class="tema-content">
+                        <p>Son prácticas de violencia en la vida cotidiana, sutiles e invisibilizadas, que los varones realizan para mantener el dominio y superioridad sobre las mujeres. Se dividen en 4 tipos:</p>
+                        <ol>
+                            <li><strong>Utilitarios:</strong> Forzar a la mujer a hacerse cargo del cuidado (hogar, hijos) "aprovechando" sus supuestas capacidades femeninas. El varón se desentiende.</li>
+                            <li><strong>Encubiertos:</strong> Ocultan su objetivo de dominio. Paternalismo, manipulación emocional, "hacerse el tonto", generar dudas en la mujer sobre su propia cordura (gaslighting).</li>
+                            <li><strong>Coercitivos:</strong> Uso de la fuerza psicológica o económica para retener poder. Control del dinero, control del espacio (ocupar toda la casa), control del tiempo de ella, exigencias abusivas.</li>
+                            <li><strong>De Crisis:</strong> Ocurren cuando la mujer empieza a empoderarse o rebelarse. El varón finge ser la víctima ("te estás volviendo loca", "me dejas de lado"), promete cambiar falsamente, o amenaza con irse.</li>
+                        </ol>
+                    </div>
+                </details>
+
+                <details class="tema-card">
+                    <summary>Acoso y Violencia Digital</summary>
+                    <div class="tema-content">
+                        <ul>
+                            <li><strong>Grooming:</strong> Delito donde un adulto crea un perfil falso o usa engaños en internet para ganar la confianza de un niño, niña o adolescente, con el fin de obtener material sexual (fotos/videos) y luego extorsionarlo.</li>
+                            <li><strong>Ciberbullying:</strong> Acoso hostil, repetido y sistemático a través de medios digitales entre pares (adolescentes). Al ser en internet, la víctima no tiene un "refugio" ni siquiera en su casa.</li>
+                            <li><strong>Sexting y Pornovenganza:</strong> El sexting (enviar fotos íntimas consentidas) es una práctica de la sexualidad digital. El delito ocurre en la <em>difusión no consentida</em> de ese material (pornovenganza) para humillar a la víctima (generalmente mujeres).</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="tema-card">
+                    <summary>Salud Mental y Prevención del Suicidio</summary>
+                    <div class="tema-content">
+                        <ul>
+                            <li><strong>Ley Nacional de Salud Mental (N° 26.657):</strong> El padecimiento mental NO es un estado inmodificable. Se debe atender en hospitales generales (prohibición de crear nuevos manicomios). Las adicciones deben abordarse como políticas de salud mental, no de seguridad.</li>
+                            <li><strong>Suicidio (Ley 27.130 y estadísticas):</strong> El suicidio es una de las principales causas de muerte adolescente. Hay una fuerte <strong>masculinización del riesgo</strong>: los varones se suicidan mucho más porque el mandato de masculinidad ("los hombres no lloran") les impide pedir ayuda frente al dolor emocional.</li>
+                            <li><em>Mito vs Realidad:</em> Hablar de suicidio NO incita a hacerlo. Hablar responsablemente y escuchar previene y salva vidas.</li>
+                            <li><strong>Guía para Víctimas (La Pampa):</strong> Articulación entre Madres del Dolor y el gobierno provincial para dar contención psicológica y jurídica inmediata tras hechos violentos.</li>
+                        </ul>
+                    </div>
+                </details>
+            </section>
+
+            <!-- AUTORES -->
+            <section id="autores" class="seccion">
+                <h1>Glosario Rápido de Autores</h1>
+                <div class="autores-grid">
+                    <div class="autor-card">
+                        <h3>Vicent Marqués</h3>
+                        <p>Desnaturalización de la vida cotidiana. Lo que llamamos "normal" es un acuerdo social arbitrario.</p>
+                    </div>
+                    <div class="autor-card">
+                        <h3>Edmund Leach</h3>
+                        <p>Clasificación de la Otredad. Cómo la sociedad inventa al "Otro" para justificar el dominio o el miedo.</p>
+                    </div>
+                    <div class="autor-card">
+                        <h3>Rita Segato</h3>
+                        <p>Contrapedagogías de la crueldad. El mandato de masculinidad y cómo el capitalismo nos vuelve insensibles.</p>
+                    </div>
+                    <div class="autor-card">
+                        <h3>Luis Bonino</h3>
+                        <p>Creador del concepto de "Micromachismos" (utilitarios, encubiertos, coercitivos y de crisis).</p>
+                    </div>
+                    <div class="autor-card">
+                        <h3>Silvia Chejter</h3>
+                        <p>Tipos y modalidades de violencia. Violencia simbólica como base de la pirámide de la violencia de género.</p>
+                    </div>
+                    <div class="autor-card">
+                        <h3>Thomas Kuhn</h3>
+                        <p>Paradigmas científicos, crisis y revolución científica en la forma de entender el mundo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JUEGO DE CARTAS -->
+            <section id="juego" class="seccion">
+                <div class="game-header">
+                    <h1>Proyecto Final: Narrativas Escolares</h1>
+                    <p>Seleccioná un personaje. En cada problema, elegí una carta de acción para avanzar. Tus decisiones impactan en su trayectoria.</p>
+                </div>
+                
+                <!-- Selección de Personaje -->
+                <div id="seleccion-personaje" class="character-selection">
+                    <div class="character-card" onclick="iniciarJuego('fatima')">
+                        <h3>Fátima (16)</h3>
+                        <p>Migrante paraguaya. Asiste a un colegio secundario público en Santa Rosa, La Pampa.</p>
+                        <span class="tag">Xenofobia</span> <span class="tag">Exclusión</span>
+                    </div>
+                    <div class="character-card" onclick="iniciarJuego('martina')">
+                        <h3>Martina (17)</h3>
+                        <p>Asiste a un colegio privado de élite en Santa Rosa. Entorno de alto poder adquisitivo.</p>
+                        <span class="tag">Grooming</span> <span class="tag">Micromachismos</span>
+                    </div>
+                    <div class="character-card" onclick="iniciarJuego('lautaro')">
+                        <h3>Lautaro (15)</h3>
+                        <p>Asiste a un colegio en un barrio periférico marginado del conurbano bonaerense.</p>
+                        <span class="tag">Salud Mental</span> <span class="tag">Violencia Física</span>
+                    </div>
+                </div>
+
+                <!-- Escenario del Juego (Cartas) -->
+                <div id="escenario-juego" class="game-stage oculto">
+                    <h2 id="personaje-nombre"></h2>
+                    <div class="historia-container">
+                        <p id="historia-texto" class="historia-texto"></p>
+                    </div>
+                    
+                    <div id="cartas-container" class="cartas-grid">
+                        <!-- Las cartas se generan por JS -->
+                    </div>
+
+                    <div id="consecuencia-container" class="consecuencia-box oculto">
+                        <h3>Consecuencia de tu decisión:</h3>
+                        <p id="consecuencia-texto"></p>
+                        <div class="teoria-box">
+                            <strong><i class="fas fa-book"></i> Dato Teórico / Legal:</strong>
+                            <p id="teoria-texto"></p>
+                        </div>
+                        <button id="btn-continuar" class="btn-primary" onclick="avanzarEscenario()">Siguiente Problema</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
